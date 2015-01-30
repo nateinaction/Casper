@@ -835,6 +835,32 @@ body:not(.post-template) .post-title {
     line-height: 1.5em;
 }
 
+/* custom */
+.post-thumb {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  webkit-box-shadow: inset 0 0 4rem rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0 0 4rem rgba(0,0,0,0.5);
+  box-shadow:inset 0 0 4rem rgba(0,0,0,0.5);
+  margin: 1rem;
+}
+.post-thumb-empty {
+  margin: 1rem;
+}
+.post-overlay {
+  background-color: rgba(0, 100, 150, 0.6);
+  padding: 1rem;
+}
+.post-overlay:hover{
+  background-color: rgba(0, 100, 150, 1);
+}
+.loop .post-title, .loop .post-excerpt {
+  color:white!important;
+}
+.loop a {
+  text-decoration:none!important;
+}
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
