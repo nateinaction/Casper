@@ -5,25 +5,25 @@
 
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="{{post_class}} loop">
-	<a href="{{url}}">
-    <div {{#if image}}class="post-thumb" style="background-image: url({{image}})"{{else}}class="post-thumb-empty"{{/if}}>
-	    <div class="post-overlay">
-				<header class="post-header">
-		    	<h2 class="post-title">{{{title}}}</h2>
-		    </header>
-		    <section class="post-excerpt">
-					<p>{{excerpt words="26"}} &raquo;</p>
-		    </section>
-		    <footer class="post-meta">
-					{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
-					{{author}}
-					<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-		    </footer>
+<a href="{{url}}">
+	<article class="{{post_class}} loop">
+	    <div {{#if image}}class="post-thumb" style="background-image: url({{image}})"{{else}}class="post-thumb-empty"{{/if}}>
+		    <div class="post-overlay">
+					<header class="post-header">
+			    	<h2 class="post-title">{{{title}}}</h2>
+			    </header>
+			    <section class="post-excerpt">
+						<p>{{excerpt words="26"}} &raquo;</p>
+			    </section>
+			    <footer class="post-meta">
+						{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
+						{{author}}
+						<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+			    </footer>
+				</div>
 			</div>
-		</a>
-	</div>
-</article>
+	</article>
+</a>
 {{/foreach}}
 
 {{! Previous/next page links - displayed on every page }}
